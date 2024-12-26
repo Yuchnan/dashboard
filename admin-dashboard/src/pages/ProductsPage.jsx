@@ -23,7 +23,7 @@ const ProductsPage = () => {
                     <StatCard name="Total Produk" icon={Package} value="23200" color="#6366F1" />
                     <StatCard name="Penjualan Terbaik" icon={TrendingUp} value="1.234" color="#8B5CF6" />
                     <StatCard name="Stok Rendah" icon={AlertTriangle} value="666" color="#EC4899" />
-                    <StatCard name="Total Pendapatan" icon={DollarSign} value="15%" color="#10B981" />
+                    <StatCard name="Total Pendapatan" icon={DollarSign} value="Rp123.465.789" color="#10B981" />
                 </motion.div>
 
                 <ProductTable />
