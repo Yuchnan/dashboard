@@ -2,6 +2,9 @@ import React from 'react'
 import Header from '../components/common/Header'
 import StatCard from '../components/common/StatCard'
 import UserTable from '../components/users/UserTable'
+import UserGrowthChart from '../components/users/UserGrowthChart';
+import UserActivityHeatmap from '../components/users/UserActivityHeatmap';
+import UserDemographicChart from '../components/users/UserDemographicChart';
 
 import { motion } from 'framer-motion';
 import { UserCheck, UserPlus, UsersIcon, UserX } from 'lucide-react'
@@ -16,7 +19,7 @@ const userStats = {
 const UsersPage = () => {
     return (
         <div className='flex-1 overflow-auto relative z-10'>
-            <Header title="Products" />
+            <Header title="Users" />
             <main className='max-w-7xl mx-auto py-6 px-4 lg:px-8'>
                 {/* Stats */}
                 <motion.div

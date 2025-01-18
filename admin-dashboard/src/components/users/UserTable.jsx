@@ -1,17 +1,17 @@
 import React, { useState } from 'react'
 
-import { userData } from '../../constants/usersPage/userData'
+import { USER_DATA } from '../../constants/usersPage/userData'
 import { motion } from "framer-motion"
 import { Edit, Trash2 } from 'lucide-react'
 
 const UserTable = () => {
     const [searchTerm, setSearchTerm] = useState("")
-    const [filteredUsers, setFilteredUsers] = useState(userData)
+    const [filteredUsers, setFilteredUsers] = useState(USER_DATA)
 
     const handleSearch = (e) => {
         const term = e.target.value.toLowerCase()
         setSearchTerm(term)
-        const filtered = userData.filter(
+        const filtered = USER_DATA.filter(
             (user) => user.name.toLowerCase().includes(term) || user.email.toLowerCase().includes(term)
         )
         setFilteredUsers(filtered)

@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { motion } from 'framer-motion';
 import { DATA_PENJUALAN } from '../../constants/overviewPage/dataPenjualan';
@@ -20,7 +21,7 @@ const SalesTrendChart = () => {
                         <YAxis stroke='#9CA3AF' />
                         <Tooltip
                             contentStyle={{
-                                backgroundColor: "rgba(31,41,55,0,8)",
+                                backgroundColor: "rgba(31,41,55,0.8)",
                                 borderColor: "#4B5563",
                             }}
                             itemStyle={{ color: "#E5E7EB" }}
