@@ -6,4 +6,4 @@ export const DATA_KATEGORI = [
     { name: 'Olahraga', value: 2100 },
 ]
 
-export const WARNA_KATEGORI = ["#6366f1", "#8B5CF6", "#EC4899", "#10B981", "#F59E0B"]
+export const WARNA = ["#6366f1", "#8B5CF6", "#EC4899", "#10B981", "#F59E0B"]

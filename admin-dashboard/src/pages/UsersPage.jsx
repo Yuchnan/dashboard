@@ -8,18 +8,12 @@ import UserDemographicChart from '../components/users/UserDemographicChart';
 
 import { motion } from 'framer-motion';
 import { UserCheck, UserPlus, UsersIcon, UserX } from 'lucide-react'
-
-const userStats = {
-    totalUsers: 152845,
-    newUsersToday: 222,
-    activeUsers: 99666,
-    churnRate: "3.5%"
-}
+import { SALES_STATS } from '../constants/salesPage/salesStats.js'
 
 const UsersPage = () => {
     return (
         <div className='flex-1 overflow-auto relative z-10'>
-            <Header title="Users" />
+            <Header title="Pengguna" />
             <main className='max-w-7xl mx-auto py-6 px-4 lg:px-8'>
                 {/* Stats */}
                 <motion.div
@@ -28,10 +22,10 @@ const UsersPage = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
                 >
-                    <StatCard name="Total Pengguna" icon={UsersIcon} value={userStats.totalUsers.toLocaleString()} color="#6366F1" />
-                    <StatCard name="Pengguna Baru Per Hari Ini" icon={UserPlus} value={userStats.newUsersToday.toLocaleString()} color="#10B981" />
-                    <StatCard name="Pengguna Aktif" icon={UserCheck} value={userStats.activeUsers.toLocaleString()} color="#F59E0B" />
-                    <StatCard name="Presentase Pelanggan yang Berhenti Menggunakan" icon={UserX} value={userStats.churnRate} color="#EF4444" />
+                    <StatCard name="Total Pengguna" icon={UsersIcon} value={USER_STATS.totalUsers.toLocaleString()} color="#6366F1" />
+                    <StatCard name="Pengguna Baru Per Hari Ini" icon={UserPlus} value={USER_STATS.newUsersToday.toLocaleString()} color="#10B981" />
+                    <StatCard name="Pengguna Aktif" icon={UserCheck} value={USER_STATS.activeUsers.toLocaleString()} color="#F59E0B" />
+                    <StatCard name="Presentase Pelanggan yang Berhenti Menggunakan" icon={UserX} value={USER_STATS.churnRate} color="#EF4444" />
                 </motion.div>
 
                 <UserTable />

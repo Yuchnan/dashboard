@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { motion } from 'framer-motion';
-import { DATA_SALURAN_PENJUALAN, WARNA_KATEGORI } from '../../constants/overviewPage/channelPenjualan';
+import { DATA_SALURAN_PENJUALAN, WARNA } from '../../constants/overviewPage/channelPenjualan';
 import { Bar, BarChart, CartesianGrid, Cell, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
 const SalesChannelChart = () => {
@@ -29,7 +29,7 @@ const SalesChannelChart = () => {
                         <Legend />
                         <Bar dataKey="value" fill="#8884D8">
                             {DATA_SALURAN_PENJUALAN.map((entry, index) => (
-                                <Cell key={`cell-${index}`} fill={WARNA_KATEGORI[index % WARNA_KATEGORI.length]} />
+                                <Cell key={`cell-${index}`} fill={WARNA[index % WARNA.length]} />
                             ))}
                         </Bar>
                     </BarChart>

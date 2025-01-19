@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from 'recharts';
-import { DATA_KATEGORI, WARNA_KATEGORI } from '../../constants/overviewPage/dataKategori';
+import { DATA_KATEGORI, WARNA } from '../../constants/overviewPage/dataKategori';
 
 const CategoryDistributionChart = () => {
     return (
@@ -26,7 +26,7 @@ const CategoryDistributionChart = () => {
                             label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
                         >
                             {DATA_KATEGORI.map((entry, index) => (
-                                <Cell key={`cell-${index}`} fill={WARNA_KATEGORI[index % WARNA_KATEGORI.length]} />
+                                <Cell key={`cell-${index}`} fill={WARNA[index % WARNA.length]} />
                             ))}
                         </Pie>
                         <Tooltip
